@@ -1,0 +1,20 @@
+<app-nav></app-nav>
+<table class="table">
+  <caption>
+    List of products
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product?.name }}</td>
+      <td>{{ product?.price | currency }}</td>
+    </tr>
+  </tbody>
+</table>
